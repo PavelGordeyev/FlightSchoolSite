@@ -1,0 +1,28 @@
+.aircraft{
+	height: 250px;
+	border: 4px solid orange;
+	border-radius: 35px;
+}
+.aircraft img{
+	width: 400px;
+	float: left;
+	margin: 12px 20px;
+}
+
+.down-arrow{
+	font-size: 3em;
+	margin: 0 20px 0 0;
+	text-align: right;
+	color: grey;
+}
+
+.expanding{
+
+	transition: height 0.3s ease-in-out;
+	-moz-transition: height 0.3s ease-in-out;
+	-webkit-transition: height 0.3s ease-in-out;
+}
+
+.expanding:hover{
+	height: 500px;
+}

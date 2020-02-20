@@ -6,6 +6,9 @@ let upArrow = document.getElementsByClassName('up-arrow');
 
 let content = document.getElementById('content');
 
+let extra = document.getElementsByClassName('extra');
+
+
 content.addEventListener('click', divAdjust);
 
 function divAdjust(event) {
@@ -32,11 +35,17 @@ function expandDiv(event,aircraftIndex) {
 	// Change the class on the arrow
 	downArrow.item(index).classList.add('up-arrow');
 	downArrow.item(index).classList.remove('down-arrow');
+
+	// Show hidden text
+	extra.item(aircraftIndex).classList.remove('hidden-text');
 }
 
 function collapseDiv(event,aircraftIndex) {
 
 	let index = getIndex(upArrow,event.target);
+
+	// Show hidden text
+	extra.item(aircraftIndex).classList.add('hidden-text');
 
 	// Collapse the aircraft article
 	aircraft.item(aircraftIndex).classList.remove('expanding');
@@ -47,10 +56,11 @@ function collapseDiv(event,aircraftIndex) {
 	// Change the class on the arrow
 	upArrow.item(index).classList.add('down-arrow');
 	upArrow.item(index).classList.remove('up-arrow');
+
 }
 
 function getIndex(collection,target){
-	
+
 	for(var i=0;i<collection.length;i++){
 		if(collection.item(i) == target){
 			return i;

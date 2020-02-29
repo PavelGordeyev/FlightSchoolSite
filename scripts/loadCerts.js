@@ -1,13 +1,36 @@
-// Airplanes object
-let certs = {
-	sport: new certificate('Sport',"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
-	private: new certificate('Private',"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
-	commercial: new certificate('Commercial',"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
-	cfi: new certificate('CFI',"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
-	multi: new certificate('ME',"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+// Create certificate elements
+function createCert(name,desc){
 
-};
+	var certificate = document.createElement('article'),
+		row = document.createElement('div'),
+		labelDiv = document.createElement('div'),
+		textDiv = document.createElement('div'),
+		text = document.createElement('p');
 
+	// Set classes
+	certificate.classList.add('container');
+	row.classList.add('row');
+	labelDiv.classList.add('col');
+	labelDiv.classList.add('cert-label');
+	textDiv.classList.add('col-6');
+	textDiv.classList.add('overflow-auto');
+	textDiv.classList.add('cert-text');
+	
+	// Set text
+	labelDiv.innerHTML = name;
+	text.innerHTML = desc;
+
+	// Append all elements
+	textDiv.appendChild(text);
+	row.appendChild(labelDiv);
+	row.appendChild(textDiv);
+	certificate.appendChild(row);
+
+	// Add project element to the page
+	document.getElementById('content').appendChild(certificate);
+}
+
+// Load certs
 let certKeys = Object.keys(certs);
 
 certKeys.forEach(function(cert){

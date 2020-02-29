@@ -6,7 +6,7 @@ var airplane = function(name,desc,extra,imgURI){
 	this.imgURI = imgURI;
 }
 
-// Create project elements
+// Create airplane elements
 function createAirplane(name,desc,extra,imgURI){
 
 	var airplane = document.createElement('article'),

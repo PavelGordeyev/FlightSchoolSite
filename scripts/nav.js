@@ -1,7 +1,6 @@
 menuLinks = {
 	'Home': 'index.html',
 	'Aircraft': 'aircraft.html',
-	'Pricing': 'pricing.html',
 	'Certificates': 'certificates.html',
 	'Resources': 'resources.html',
 	'Local Info': 'local.html',

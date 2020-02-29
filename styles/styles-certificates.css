@@ -6,6 +6,10 @@ article{
 	height: 180px;
 }
 
-.cert-label{
-	font-size: 5em;
+.cert-name{
+	font-size: 3em;
+}
+
+.cert-price{
+	font-size: 1em;
 }

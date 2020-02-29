@@ -1,5 +1,5 @@
 // Create airplane elements
-function createAirplane(name,desc,extra,imgURI){
+function createAirplane(name,desc,extra,imgURI,price){
 
 	var airplane = document.createElement('article'),
 		airplaneName = document.createElement('h3'),
@@ -18,7 +18,7 @@ function createAirplane(name,desc,extra,imgURI){
 	airplaneExtra.classList.add('hidden-text');
 	
 	// Set airplane name
-	airplaneName.innerHTML = name;
+	airplaneName.innerHTML = name + ' - $' + price + '/hr';
 
 	// Set airplane image link
 	airplaneImg.src = imgURI;
@@ -47,5 +47,5 @@ function createAirplane(name,desc,extra,imgURI){
 let airplaneKeys = Object.keys(airplanes);
 
 airplaneKeys.forEach(function(airplane){
-	createAirplane(airplanes[airplane].name,airplanes[airplane].desc,airplanes[airplane].extra,airplanes[airplane].imgURI);
+	createAirplane(airplanes[airplane].name,airplanes[airplane].desc,airplanes[airplane].extra,airplanes[airplane].imgURI,airplanes[airplane].price);
 });

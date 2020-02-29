@@ -15,7 +15,8 @@ function createNav(links){
 	var nav = document.createElement('nav'),
 		list = document.createElement('ul'),
 		linkKeys = Object.keys(links),
-		linkVals = Object.values(links);
+		linkVals = Object.values(links),
+		title = document.title.substring(0,document.title.length - 27);
 
 
 	// Add link titles and reference for all links
@@ -29,11 +30,17 @@ function createNav(links){
 		linkItem.href = linkVals[i];
 
 		menuItem.appendChild(linkItem);
+
+		// Add the nav coloring to current page 
+		if(title == linkKeys[i]){
+			menuItem.classList.add('current');
+		}
+
 		list.appendChild(menuItem);
 	}
 
 	nav.appendChild(list);
 
 	// Add project element to the page
-	document.getElementById('content-wrapper').insertBefore(nav,document.getElementById('content-wrapper').firstChild);
+	document.getElementById('navbar').appendChild(nav);
 }

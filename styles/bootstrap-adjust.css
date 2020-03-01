@@ -5,7 +5,7 @@
 }
 
 .carousel-indicators{
-	top: 276px;
+	top: 275px;
 }
 
 .carousel-indicators li{
@@ -22,6 +22,12 @@
 .col-3{
 	padding-left: 0;
 	margin-left: -7px;
+}
+
+.col-md-4{
+	background-color: #1a4f85;
+	color: white;
+	border-radius: 15px;
 }
 
 .form-group{

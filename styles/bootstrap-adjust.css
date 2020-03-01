@@ -32,3 +32,8 @@
 input{
 	margin: 10px 0;
 }
+
+#submit{
+	background-color: #1a4f85;
+	margin-bottom: 50px;
+}

@@ -93,3 +93,10 @@ footer p{
 .hidden{
 	display: none;
 }
+
+#topbar{
+	position: sticky;
+	top: 0;
+	z-index: 9999;
+	background-color: white;
+}

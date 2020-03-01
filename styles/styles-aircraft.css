@@ -1,11 +1,12 @@
 .aircraft{
+	max-width: 932px;
+	min-width: 932px;
 	height: 250px;
-	border: 4px solid orange;
-	border-radius: 35px;
+	border-bottom: 2px solid #1a4f85;
 	margin: 10px 0 10px 0;
 }
 .aircraft img{
-	width: 400px;
+	width: 333px;
 	height: 200px;
 	float: left;
 	margin: 22px 20px;
@@ -13,7 +14,7 @@
 
 .down-arrow, .up-arrow{
 	font-size: 3em;
-	margin: 86px 10px 0 0;
+	margin: 0px 10px 0 0;
 	text-align: right;
 	color: grey;
 }
@@ -23,9 +24,18 @@
 	transition: height 0.3s ease-in-out;
 	-moz-transition: height 0.3s ease-in-out;
 	-webkit-transition: height 0.3s ease-in-out;
-	height: 500px;
+	height: 412px;
 }
 
 .hidden-text{
 	visibility: hidden;
+}
+
+.extra{
+	margin-left: 20px;
+}
+
+h5{
+	max-width: 932px;
+	min-width: 932px;
 }

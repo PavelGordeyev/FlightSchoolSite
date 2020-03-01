@@ -23,3 +23,12 @@
 	padding-left: 0;
 	margin-left: -7px;
 }
+
+.form-group{
+	margin-top: 30px;
+	width: 300px;
+}
+
+input{
+	margin: 10px 0;
+}

@@ -2,6 +2,12 @@
 article{
 	margin: 10px 0 10px 0;
 }
+
+.cert{
+	border-bottom: 2px solid #1a4f85;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 .cert-text{
 	height: 180px;
 }

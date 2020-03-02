@@ -11,6 +11,7 @@ function createCert(name,desc,price){
 
 	// Set classes
 	certificate.classList.add('container');
+	certificate.classList.add('cert')
 	containerRow.classList.add('row');
 	nameRow.classList.add('cert-name');
 	priceRow.classList.add('cert-price');

@@ -18,6 +18,7 @@ nav{
 	background-color: #ffffff;
 	z-index: 999;
 	overflow: hidden;
+	border-bottom: 2px solid #1a4f85;
 }
 
 nav ul{

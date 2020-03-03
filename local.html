@@ -2,12 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="scripts/custom/airplane.js"></script>
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/styles-main.css">
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-adjust.css">
-    <link rel="stylesheet" type="text/css" href="styles/styles-aircraft.css">
-    <title>Local * Soar Above Flight School</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles-local.css">
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 300px;  /* The height is 300 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+
+    <title>Local Info * Soar Above Flight School</title>
   </head>
   <body>
     <div id="content-wrapper">
@@ -21,11 +28,23 @@
         </div>
       </div>
       <section id="content">
+        <div id="map"></div>
+        <article id="local-info">
+          <aside>
+          <h3><br/>We are located at Boeing Field, south of Downtown Seattle!</h3><p> There is a lot of air traffic in the Seattle area,
+          which makes it a great place for learning and plane-spotting! Come down and see for yourself!</p>
+          <p>As well, there are noise abatement procedures for the airport for departing and arriving aircraft. They can be found <strong><a href="https://www.kingcounty.gov/~/media/depts/transportation/airport/kbfi-vfr-westbound-procedures.ashx?la=en" target="_blank">here</a></strong>.</p>
+          <p>We are located in a Class D airspace, underneath the Seattle Class B airspace.</p>
+          <p>For more information regarding the King County Boeing Field Airport, visit <strong><a href="https://www.kingcounty.gov/services/airport.aspx" target="_blank">here</a></strong>.</p></aside>
+          <img src="images/kbfi.jpg" width="700">
+        </article>
       </section> <!-- #content -->
       <footer>
         <p>Soar Above Flight School || 1234 S Airport Drive, Seattle, WA 98555 || (425)555-5555</p>
         <p>All Contents &copy; 2020 Soar Above Flight School. All Rights Reserved.</p>
       </footer>
+      
+
     </div><!-- #content-wrapper -->
 
     <!-- Scripts -->
@@ -33,5 +52,19 @@
     <script src="scripts/main/jquery-3.4.1.slim.min.js"></script>
     <script src="scripts/main/popper.min.js"></script>
     <script src="scripts/main/bootstrap.min.js"></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var uluru = {lat: 47.52, lng: -122.30};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 10, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuaHKMXukSMXahZl9vdRLYQ_j_M0K2Dg0&callback=initMap">
+      </script>
   </body>
 </html>
